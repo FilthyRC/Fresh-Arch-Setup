@@ -37,3 +37,5 @@ else
     echo "✅ Yay already installed"
 fi
 
+## ===== Install Main Packages =====
+sudo pacman -S --needed --noconfirm $(grep -vE '^\s*#' ./packages/arch-base.txt | awk 'NF')
